@@ -1,6 +1,8 @@
 #include <stdio.h>
-/*
- * A Program that prints a string followed by a new line to the screen
+/**
+ * main - A Program that prints a string followed by a new line to the screen
+ *
+ * Return: 0
  */
 
 int main(void)
