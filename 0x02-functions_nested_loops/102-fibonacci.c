@@ -11,8 +11,8 @@ int main(void)
 {
 	unsigned int a, b, tmp, i;
 
-	a = 0;
-	b = 1;
+	a = 1;
+	b = 2;
 	for (i = 0; i < 50; i++)
 	{
 		if (i != 49)
