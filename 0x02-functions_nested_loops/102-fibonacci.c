@@ -17,9 +17,9 @@ int main(void)
 	for (i = 0; i < 50; i++)
 	{
 		if (i != 49)
-			printf("%u, ", a);
+			printf("%lu, ", a);
 		else
-			printf("%u\n", a);
+			printf("%lu\n", a);
 		tmp = a + b;
 		a = b;
 		b = tmp;
