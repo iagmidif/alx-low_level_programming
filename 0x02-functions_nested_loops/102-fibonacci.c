@@ -9,7 +9,8 @@
  */
 int main(void)
 {
-	unsigned int a, b, tmp, i;
+	unsigned long int a, b, tmp;
+	int i;
 
 	a = 1;
 	b = 2;
