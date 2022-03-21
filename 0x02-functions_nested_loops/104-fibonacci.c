@@ -16,11 +16,13 @@ int main(void)
 	tmp = 0;
 	for (i = 0; i < 98; i++)
 	{
+		tmp = a + b;
 		if (i == 97)
 			printf("%lu\n", a);
+		else if (i == 0)
+			printf("%lu, %lu, ", a, b);
 		else
 			printf("%lu, ", a);
-		tmp = a + b;
 		a = b;
 		b = tmp;
 	}
