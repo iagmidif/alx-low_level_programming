@@ -18,11 +18,11 @@ int main(void)
 	{
 		tmp = a + b;
 		if (i == 97)
-			printf("%lu\n", a);
+			printf("%lu\n", b);
 		else if (i == 0)
 			printf("%lu, %lu, ", a, b);
 		else
-			printf("%lu, ", a);
+			printf("%lu, ", b);
 		a = b;
 		b = tmp;
 	}
