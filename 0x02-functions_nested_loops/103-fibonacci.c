@@ -14,9 +14,14 @@ int main(void)
 
 	a = 1;
 	b = 2;
-	while (b < 4000000)
+	sum = 0;
+	while (a < 4000000)
 	{
-		sum += a;
+		if (a % 2 == 0)
+		{
+			/* printf("%lu\n", a); */
+			sum += a;
+		}
 		tmp = a + b;
 		a = b;
 		b = tmp;
