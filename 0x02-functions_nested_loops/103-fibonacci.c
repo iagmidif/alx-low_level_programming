@@ -10,7 +10,7 @@
  */
 int main(void)
 {
-	unsigned long long int a, b, tmp, sum;
+	unsigned long int a, b, tmp, sum;
 
 	a = 1;
 	b = 2;
@@ -21,6 +21,6 @@ int main(void)
 		a = b;
 		b = tmp;
 	}
-	printf("%llu\n", sum);
+	printf("%lu\n", sum);
 	return (0);
 }
