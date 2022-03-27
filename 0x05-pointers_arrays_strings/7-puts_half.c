@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
  * _strlen - returns the length of a string.
@@ -38,8 +39,8 @@ void puts_half(char *str)
 			_putchar(*(str + i));
 	}
 	else
-	{
-		for (i = (strLength - 1) / 2; i < strLength; i++)
+	{	
+		for (i = ((strLength + 1) / 2); i < strLength; i++)
 			_putchar(*(str + i));
 	}
 	_putchar('\n');
