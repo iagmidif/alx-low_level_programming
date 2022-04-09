@@ -3,14 +3,15 @@
 /**
  * cap_string - capitalizes all words of a string
  * @s: string to be used
- 
+ *
  * Return: capitalized string
  */
 
 char *cap_string(char *s)
 {
 	int count = 0, i;
-	int word_sep[] = {' ', '\t', '\n', ',', ';', '.', '!', '?', '"', '(', ')', '{', '}'};
+	int word_sep[] = {' ', '\t', '\n', ',', ';', '.',
+		'!', '?', '"', '(', ')', '{', '}'};
 
 	if (*(s + count) >= 97 && *(s + count) <= 122)
 		*(s + count) = *(s + count) - 32;
