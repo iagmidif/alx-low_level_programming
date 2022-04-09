@@ -23,6 +23,8 @@ int _strcmp(char *s1, char *s2)
 			cmp = 1;
 		else
 			cmp = (int) *(s1 + i) - (int) *(s2 + i);
+		if (i > 0 && *(s1 + i) == '\0' && *(s2 + i) == '\0')
+			break;
 		i++;
 	}
 	return (cmp);
