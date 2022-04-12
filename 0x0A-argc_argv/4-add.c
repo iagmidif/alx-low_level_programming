@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 /**
  * main - entry point
@@ -22,13 +23,15 @@ int main(int argc, char *argv[])
 		for (i = 1; i < argc; i++)
 		{
 			n = atoi(argv[i]);
-			if (n > 0)
-				sum += n;
-			else if (*argv[i] != 48 && atoi(argv[i]) <= 0)
+
+			if ((atoi(argv[i]) < 10 && strlen(argv[i]) > 1)
+					|| (*argv[i] != 48 && atoi(argv[i]) <= 0))
 			{
 				printf("Error\n");
 				return (1);
 			}
+			else
+				sum += n;
 		}
 		printf("%d\n", sum);
 	}
