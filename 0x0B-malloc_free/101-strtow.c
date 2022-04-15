@@ -1,6 +1,26 @@
 #include <stdlib.h>
 
 /**
+ * free_pta - frees a memory used by a 2d array
+ * @pta: pointer to an array of pointers
+ * @i: size of the array
+ *
+ * Return: void, nth
+ */
+void free_pta(char **pta, int i)
+{
+	if (pta != NULL && i > 0)
+	{
+		while (i >= 0)
+		{
+			free(pta[i]);
+			i--;
+		}
+		free(pta);
+	}
+}
+
+/**
  * splits a string into words.
  * @str: pointer to the string to be split
  *
@@ -36,12 +56,7 @@ char **strtow(char *str)
 				arr[i] = malloc(sizeof(char) * (c - k + 2));
 				if (arr[i] == NULL)
 				{
-					while (i >= 0)
-					{
-						free(arr[i]);
-						i--;
-					}
-					free(arr);
+					free_pta(arr, i);
 					return (NULL);
 				}
 				break;
