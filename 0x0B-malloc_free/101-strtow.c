@@ -21,7 +21,7 @@ void free_pta(char **pta, int i)
 }
 
 /**
- * splits a string into words.
+ * strtow - splits a string into words.
  * @str: pointer to the string to be split
  *
  * Return: pointer to an array of char pointers if successful
@@ -45,7 +45,7 @@ char **strtow(char *str)
 		return (NULL);
 	}
 	k = 0;
-	for(i = k; i < words; i++)
+	for (i = k; i < words; i++)
 	{
 		for (c = k; str[c] != '\0'; c++)
 		{
