@@ -1,3 +1,5 @@
+#define NULL ((void *)0)
+
 /**
  * print_name - prints a name using a callback function
  * @name: pointer to the name
