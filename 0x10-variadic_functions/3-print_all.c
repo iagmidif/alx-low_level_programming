@@ -53,5 +53,5 @@ void print_all(const char * const format, ...)
 			printf(", ");
 		i++;
 	}
-	printf("%c", format ? '\n' : 0), va_end(params);
+	printf("\n"), va_end(params);
 }
