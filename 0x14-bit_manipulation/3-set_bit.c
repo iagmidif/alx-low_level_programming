@@ -10,23 +10,31 @@
  */
 int set_bit(unsigned long int *n, unsigned int index)
 {
-	unsigned long int num = 0, weight = 1;
-	int i = 0;
-
+	/* older solution */
+	/*
+	 * unsigned long int num = 0, weight = 1;
+	 * int i = 0;
+	 *
+	 * if (index >= 64)
+	 *	return (-1);
+	 *
+	 * while (i < 64)
+	 * {
+	 *	if (index == 0)
+	 *		num += weight;
+	 *	else
+	 *		num += ((*n & 1) ? weight : 0);
+	 *	index--;
+	 *	weight *= 2;
+	 *	*n >>= 1;
+	 *	i++;
+	 * }
+	 * *n = num;
+	 * return (1);
+	 */
+	/* new solution */
 	if (index >= 64)
 		return (-1);
-
-	while (i < 64)
-	{
-		if (index == 0)
-			num += weight;
-		else
-			num += ((*n & 1) ? weight : 0);
-		index--;
-		weight *= 2;
-		*n >>= 1;
-		i++;
-	}
-	*n = num;
+	*n |= (1 << index);
 	return (1);
 }
