@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stddef.h>
 
 /**
  * _strlen - returns the length of a string
@@ -27,7 +28,7 @@ unsigned int binary_to_uint(const char *b)
 	int weight = 1, i;
 	unsigned int num = 0;
 
-	if (!(*b))
+	if (b == NULL)
 		return (0);
 	/* verify b contains a binary number */
 	i = 0;
