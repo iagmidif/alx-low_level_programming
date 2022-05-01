@@ -19,12 +19,12 @@ int main(void)
 		random = rand() % 127; /* so that char be at most 126 */
 		if (ascii > random)
 		{
-			printf("%c", random);
+			putchar(random);
 			ascii -= random;
 		}
-		else
+		else if (ascii > 0)
 		{
-			printf("%c", ascii);
+			putchar(ascii);
 			ascii = 0;
 		}
 	}
